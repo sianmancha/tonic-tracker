@@ -1,6 +1,15 @@
 import React from "react";
 
-function MedCard({med: {newMedName, newMedAmnt, newMedUse, newMedDose, newMedFreq}}) {
+function MedCard({med: {id, newMedName, newMedAmnt, newMedUse, newMedDose, newMedFreq}, handleDeletedItem}) {
+
+    function handleDeleteClick() {
+        fetch(`http://localhost:6001/medications/${id}`, {
+            method: "DELETE",
+        })
+        .then(res => res.json())
+        .then(() => handleDeletedItem(id))
+    }
+
     return (
         <div className="meds">
             <div className="name">
@@ -18,6 +27,7 @@ function MedCard({med: {newMedName, newMedAmnt, newMedUse, newMedDose, newMedFre
             <div className="freq">
                 {newMedFreq}
             </div>
+            <button className="deleteButton" onClick={handleDeleteClick}>Delete</button>
         </div>
     )
 }

@@ -15,7 +15,12 @@ import MedCard from "./MedCard";
             setMeds([...meds, newMed])
         }
 
-         const displayMeds = meds.map(med => <MedCard key={med.id} med={med}/>)
+        function handleDeletedItem(id) {
+            const updatedMeds = meds.filter((med) => med.id !== id)
+            setMeds(updatedMeds)
+        }
+
+         const displayMeds = meds.map(med => <MedCard key={med.id} med={med} handleDeletedItem={handleDeletedItem}/>)
 
         return (
             <div>
