@@ -1,0 +1,27 @@
+{
+  "medications": [
+    {
+      "id": 0,
+      "name": "",
+      "amount": "",
+      "use": "",
+      "refillable": "",
+      "dose": "",
+      "frequency": "",
+      "active": ""
+    },
+    {},
+    {
+      "newMed": "daily",
+      "id": 1
+    },
+    {
+      "newMedName": "Albuterol",
+      "newMedAmnt": "1 inhaler",
+      "newMedUse": "asthma",
+      "newMedDose": "2 puffs",
+      "newMedFreq": "emergencies",
+      "id": 2
+    }
+  ]
+}

@@ -3,7 +3,12 @@ import MedContainer from "./MedContainer";
 import Header from "./Header";
 
 function App() {
-  return 
+  return (
+    <div>
+      <MedContainer/>
+      <Header/>
+    </div>
+  )
 }
 
 export default App;

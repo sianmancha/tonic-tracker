@@ -4,7 +4,7 @@ import CreateAccount from "./CreateAccount";
 import Login from "./Login";
 
 function Header() {
-    return
+    return <h1>Header</h1>
 }
 
 export default Header;
