@@ -10,11 +10,6 @@
       "frequency": "",
       "active": ""
     },
-    {},
-    {
-      "newMed": "daily",
-      "id": 1
-    },
     {
       "newMedName": "Albuterol",
       "newMedAmnt": "1 inhaler",
@@ -22,6 +17,70 @@
       "newMedDose": "2 puffs",
       "newMedFreq": "emergencies",
       "id": 2
+    },
+    {
+      "newMedName": "Metformin",
+      "newMedAmnt": "50 pills",
+      "newMedUse": "diabetes",
+      "newMedDose": "20mg",
+      "newMedFreq": "twice daily",
+      "id": 3
+    },
+    {
+      "newMedName": "Metformin",
+      "newMedAmnt": "50 pills",
+      "newMedUse": "diabetes",
+      "newMedDose": "20mg",
+      "newMedFreq": "twice daily",
+      "id": 4
+    },
+    {
+      "newMedName": "Metformin",
+      "newMedAmnt": "50 pills",
+      "newMedUse": "diabetes",
+      "newMedDose": "20mg",
+      "newMedFreq": "twice daily",
+      "id": 5
+    },
+    {
+      "newMedName": "Metformin",
+      "newMedAmnt": "50 pills",
+      "newMedUse": "diabetes",
+      "newMedDose": "20mg",
+      "newMedFreq": "twice daily",
+      "id": 6
+    },
+    {
+      "newMedName": "sleep",
+      "newMedAmnt": "not enough",
+      "newMedUse": "most things",
+      "newMedDose": "more",
+      "newMedFreq": "2 hours",
+      "id": 7
+    },
+    {
+      "newMedName": "sleep",
+      "newMedAmnt": "not enough",
+      "newMedUse": "most things",
+      "newMedDose": "more",
+      "newMedFreq": "2 hours",
+      "id": 8
+    },
+    {
+      "newMedName": "new",
+      "newMedAmnt": "new",
+      "newMedUse": "new",
+      "newMedDose": "new",
+      "newMedFreq": "new",
+      "id": 9
+    },
+    {
+      "newMedName": "test",
+      "newMedAmnt": "test",
+      "newMedUse": "test",
+      "newMedDose": "test",
+      "newMedFreq": "test",
+      "id": 10
     }
   ]
 }

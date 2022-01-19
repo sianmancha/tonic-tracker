@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function NewMedForm() {
+function NewMedForm({handleAddMeds}) {
     const [newMedName, setNewMedName] = useState("")
     const [newMedAmnt, setNewMedAmnt] = useState("")
     const [newMedUse, setNewMedUse] = useState("")
@@ -24,7 +24,13 @@ function NewMedForm() {
         body: JSON.stringify(medData),
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(newMed => handleAddMeds(newMed))
+
+    setNewMedName("")
+    setNewMedAmnt("")
+    setNewMedUse("")
+    setNewMedDose("")
+    setNewMedFreq("")
     }
 
 
