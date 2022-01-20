@@ -1,12 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
+    background-image: url(https://wallpaper.dog/large/5515856.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+.searchbar {
+    flex: 1 1 auto;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  font-family:'Questrial', sans-serif;
+}
+
+.searchButton {
+    padding: 0 0.25rem;
+  background: rgb(223, 221, 221);
+  border: 1px solid rgb(37, 37, 37);
+  border-radius: 3px;
+}
+
+.medSubmit {
+    background: rgb(223, 221, 221);
+    border: 1px solid rgb(37, 37, 37);
+    border-radius: 3px;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    transition: all 0.2s;
+    /* display: grid; */
+    font-family:'Questrial', sans-serif;
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+}
+.medForm {
+    background-color: rgb(212, 214, 216);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 75px;
+    margin-right: 75px;
+    font-size: 20px;
+    justify-content: center;
+     text-align: center; 
+    font-family:'Questrial', sans-serif;
+    opacity: .5;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 12px 20px;
+
+    
+    
+
+}
+
+.submit {
+    text-align: center;
+}
+
 .meds {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     margin: 1rem;
     box-shadow: 0 0 7px p #ddd;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border: 1px solid #ccc;
-    width: 300px
+    width: 300px;
+    text-align: center;
+    font-family:'Questrial', sans-serif;
+    background-color: rgb(212, 214, 216);
+    flex-direction: column;
+    justify-content: center;
+  position: relative;
+  margin: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 10px;
+  padding: 7px;
+  box-shadow: 5px 5px rgb(174, 177, 180);
+   
 }
 
 .meds .detail {
@@ -16,5 +98,16 @@
 .deleteButton {
     padding: 0 0.25rem;
     text-align: center;
+    font-family:'Questrial', sans-serif;
 }
 
+.header {
+    font-family:'Questrial', sans-serif;
+    text-align: center;
+}
+
+.activeButton {
+    padding: 0 0.25rem;
+    text-align: center;
+    font-family:'Questrial', sans-serif;
+}

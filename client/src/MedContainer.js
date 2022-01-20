@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import MedCard from "./MedCard";
 import DisplayMeds from "./DisplayMeds";
 
-function MedContainer() {
+function MedContainer({search}) {
     const [meds, setMeds] = useState([])
     console.log(meds)
 
@@ -14,32 +14,21 @@ function MedContainer() {
         })
     }, [])
 
-    const filteredMeds = meds.filter(med => {
-        return med
+    const filteredMeds = meds.filter((med) => {
+        return med.name
     })
 
-        function toggleActive(medToAdd) {
-            setMeds((meds) => {
-                const medIndex = meds.findIndex(
-                    (med) => 
-                        med.id === medToAdd.id
-                );
-                return [
-                    ...meds.slice(0, medIndex),
-                    {
-                        ...medToAdd,
-                        active: !medToAdd.active,
-                    },
-                    ...meds.slice(medIndex + 1)
-                ]
-            })
-        }
+        
+
+         
+            
+          
 
     return (
     <div>
         <DisplayMeds/>
         {
-        filteredMeds.map(med => <MedCard key={med.id} med={med} onActive={toggleActive}/>)
+        filteredMeds.map(med => <MedCard key={med.id} med={med}/>)
         }
     </div>
     )

@@ -1,3 +1,12 @@
 {
-  "medications": []
+  "medications": [
+    {
+      "newMedName": "Albuterol",
+      "newMedAmnt": "hkc",
+      "newMedUse": "acl",
+      "newMedDose": "cajlcn",
+      "newMedFreq": "ck;anc",
+      "id": 2
+    }
+  ]
 }
