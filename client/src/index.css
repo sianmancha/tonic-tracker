@@ -1,20 +1,2 @@
-.meds {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem;
-    box-shadow: 0 0 7px p #ddd;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 300px
-}
 
-.meds .detail {
-    padding: 0.5rem;
-}
-
-.deleteButton {
-    padding: 0 0.25rem;
-    text-align: center;
-}
 

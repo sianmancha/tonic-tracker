@@ -1,8 +1,6 @@
 import React from "react";
 
-
-function MedCard({ med, onActive, handleDeletedItem}) {
-    const {id, active, newMedName, newMedAmnt, newMedUse, newMedDose, newMedFreq} = med
+function MedCard({med: {id, newMedName, newMedAmnt, newMedUse, newMedDose, newMedFreq}, handleDeletedItem}) {
 
     function handleDeleteClick() {
         fetch(`http://localhost:6001/medications/${id}`, {
@@ -13,36 +11,25 @@ function MedCard({ med, onActive, handleDeletedItem}) {
     }
 
     return (
-        
         <div className="meds">
-            <div className="detail">
-                <h4>Medicine Name</h4>
+            <div className="name">
                 {newMedName}
             </div>
-            <div className="detail">
-                <h4>Amount of Medicine</h4>
+            <div className="amnt">
                 {newMedAmnt}
             </div>
-            <div className="detail">
-                <h4>Medicine Use</h4>
+            <div className="use">
                 {newMedUse}
             </div>
-            <div className="detail">
-                <h4>Dosage</h4>
+            <div className="dose">
                 {newMedDose}
             </div>
-            <div className="detail">
-                <h4>Frequency</h4>
+            <div className="freq">
                 {newMedFreq}
             </div>
-            <button onClick={() => onActive(med)} className="activeButton">
-                {active ? "Activate" : "Deactivate"}
-            </button>
             <button className="deleteButton" onClick={handleDeleteClick}>Delete</button>
         </div>
-        
     )
 }
 
 export default MedCard;
-
