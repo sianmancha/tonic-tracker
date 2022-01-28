@@ -1,10 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 
 
 function MedCard({ med, onActive, handleDeletedItem}) {
-    const {id, newMedName, newMedAmnt, newMedUse, newMedDose, newMedFreq} = med
-    const [toTake, setToTake] = useState(true)
-    const [active, setActive] = useState(true)
+    const {id, active, newMedName, newMedAmnt, newMedUse, newMedDose, newMedFreq} = med
 
     function handleDeleteClick() {
         fetch(`http://localhost:6001/medications/${id}`, {
@@ -12,14 +10,6 @@ function MedCard({ med, onActive, handleDeletedItem}) {
         })
         .then(res => res.json())
         .then(() => handleDeletedItem(id))
-    }
-
-    function toggleTaken() {
-        setToTake((toTake) => !toTake)
-    }
-
-    function toggleActive() {
-        setActive((active) => !active)
     }
 
     return (
@@ -45,16 +35,9 @@ function MedCard({ med, onActive, handleDeletedItem}) {
                 <h4>Frequency</h4>
                 {newMedFreq}
             </div>
-            {active? (
-            <button onClick={toggleActive} className="activeButton">Activate</button>
-            ) : (
-            <button onClick={toggleActive} className="activeButton">Deactivate</button>
-            )}
-            {toTake? (
-            <button onClick={toggleTaken} className="takenButton">I have taken it.</button>
-            ) : (
-            <button onClick={toggleTaken} className="takenButton">I haven't taken it.</button>
-            )}
+            <button onClick={() => onActive(med)} className="activeButton">
+                {active ? "Activate" : "Deactivate"}
+            </button>
             <button className="deleteButton" onClick={handleDeleteClick}>Delete</button>
         </div>
         

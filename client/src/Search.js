@@ -1,18 +1,7 @@
-import React, {useState} from "react";
-import MedCard from "./MedCard";
+import React from "react";
 
 function Search() {
-    const [currentSearch, setCurrentSearch] = useState("")
-
-   
-    
-
-    return (
-        <form className="searchbar" >
-            <input type="text" id="search" placeholder="Search Your Medicines By Name" value={currentSearch} onChange={(e) => setCurrentSearch(e.target.value)}></input>
-            <button className="searchButton" type="submit">Search</button>
-        </form>
-    )
+    return
 }
 
 export default Search;
