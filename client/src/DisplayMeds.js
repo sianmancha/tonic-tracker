@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import NewMedForm from "./NewMedForm";
 import MedCard from "./MedCard";
 
-    function DisplayMeds() {
+    function DisplayMeds({filteredMeds}) {
         const [meds, setMeds] = useState([])
 
         useEffect(() => {
@@ -20,12 +20,17 @@ import MedCard from "./MedCard";
             setMeds(updatedMeds)
         }
 
-         const displayMeds = meds.map(med => <MedCard key={med.id} med={med} handleDeletedItem={handleDeletedItem}/>)
-
+         const displayMeds = filteredMeds.map(med => <MedCard key={med.id} med={med} handleDeletedItem={handleDeletedItem}/>)
+console.log(displayMeds)
         return (
             <div>
                 <NewMedForm handleAddMeds={handleAddMeds}/>
-                {displayMeds}
+                {/* {meds ? (
+        filteredMeds.map(med => <MedCard key={med.id} med={med}/>)
+        ) : (
+            "Loading Medications"
+        )} */}
+            {displayMeds}
             </div>
             )
     }
