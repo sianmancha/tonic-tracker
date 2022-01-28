@@ -15,7 +15,7 @@ function NewMedForm({handleAddMeds}) {
             newMedAmnt: newMedAmnt,
             newMedUse: newMedUse,
             newMedDose: newMedDose,
-            newMedFreq: newMedFreq,
+            newMedFreq: newMedFreq
         }
     
     fetch("http://localhost:6001/medications", {
@@ -59,9 +59,8 @@ function NewMedForm({handleAddMeds}) {
                     How often do you take it?
                 <input type="text" placeholder="" value={newMedFreq} onChange={(e) => setNewMedFreq(e.target.value)}></input>
                 </label>
-                <div className="submit">
                 <input className="medSubmit" type="submit"></input>
-                </div>
+                
             </form>
         </div>
     )

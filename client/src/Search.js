@@ -1,21 +1,7 @@
-import React, {useState} from "react";
-import MedCard from "./MedCard";
+import React from "react";
 
-function Search({searchTerm, onSearchChange}) {
-    
-
-    
-    
-
-   
-    
-
-    return (
-        <form className="searchbar" >
-            <input type="text" id="search" placeholder="Search Your Medicines By Name" value={searchTerm} onChange={(e) => onSearchChange(e.target.value)}></input>
-            <button className="searchButton" type="submit">Search</button>
-        </form>
-    )
+function Search() {
+    return
 }
 
 export default Search;
