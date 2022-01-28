@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import MedContainer from "./MedContainer";
 import Header from "./Header";
 
+
 function App() {
   const [search, setSearch] = useState("")
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div>
       <Header />
+      
       <MedContainer search={search}/>
       
     </div>

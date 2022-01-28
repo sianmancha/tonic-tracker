@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import MedCard from "./MedCard";
 import DisplayMeds from "./DisplayMeds";
+import Search from "./Search";
 
-function MedContainer({search}) {
+function MedContainer({}) {
     const [meds, setMeds] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
     console.log(meds)
 
     useEffect(() => {
@@ -15,21 +17,17 @@ function MedContainer({search}) {
     }, [])
 
     const filteredMeds = meds.filter((med) => {
-        return med.name
+        console.log(med)
+        return med.newMedName.includes(searchTerm)
     })
 
-        
-
-         
-            
-          
-
+    
+    
     return (
     <div>
-        <DisplayMeds/>
-        {
-        filteredMeds.map(med => <MedCard key={med.id} med={med}/>)
-        }
+        <Search searchTerm={searchTerm} onSearchChange={setSearchTerm}/>
+        <DisplayMeds filteredMeds={filteredMeds} />
+        
     </div>
     )
 }
