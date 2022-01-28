@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-function MedCard({ med, handleDeletedItem}) {
+function MedCard({ med, onActive, handleDeletedItem}) {
     const {id, newMedName, newMedAmnt, newMedUse, newMedDose, newMedFreq} = med
     const [toTake, setToTake] = useState(true)
     const [active, setActive] = useState(true)
